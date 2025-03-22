@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="nav container">
+      <a href="#" class="logo">Q.cafe</a>
+      <div class="navbar">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#review" class="nav-link">Review</a>
+      </div>
+
+      <div class="nav-icons">
+        <a><i class='bx bx-user' id="user"></i></a>
+        <a><i class='bx bx-shopping-bag' id="cart-icon">
+            <div class="bag-count"></div>
+          </i>
+        </a>
+        <!-- list icon -->
+        <div class="list-icon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <section class="home container" id="home">
+    <img src="images/home-img-1.jpg" alt="" class="home-img">
+    <div class="home-text">
+      <h1>
+        Enjoy a new blend <br />
+        of coffee beans
+      </h1>
+      <p>Brew or order a Perfect Coffee based on your mood Anywhere Anytime</p>
+      <a href="#products" class="btn">
+        <span>Shop Now</span>
+        <i class='bx bx-up-arrow-alt'></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="services container" id="services">
+    <div class="heading">
+      <h2>
+        Blending culture,coffee & top <br>
+        notch services
+      </h2>
+    </div>
+    <div class="service-content">
+      <div class="ser-box">
+        <img src="images/coffee-machine.png" alt="">
+        <p>Equipments</p>
+      </div>
+      <div class="ser-box">
+        <img src="images/coffee-cup.png" alt="">
+        <p>Types of Coffee</p>
+      </div>
+      <div class="ser-box">
+        <img src="images/coffee.png" alt="">
+        <p>Take a Way</p>
+      </div>
+      <div class="ser-box">
+        <img src="images/coffee-beans.png" alt="">
+        <p>Beans Varients</p>
+      </div>
+      <div class="ser-box">
+        <img src="images/bakery.png" alt="">
+        <p>Pastry</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="products container" id="products">
+    <div class="heading">
+      <h2>Our Top Selling Products</h2>
+      <p>
+        It takes a lot of heart and hardwork at every step to create the best coffee possible , and we know it takes a
+        lot of grit to keep your own gring going.
+      </p>
+    </div>
+
+    <div class="product-content">
+
+      <!-- Box 1 -->
+      <div class="product-box">
+        <div onclick="toggleTypes('instant')">
+          <div class="content">
+            <img src="./images/instant-coffee.jpg" alt="">
+            <p>4 flavors to try</p>
+            <h2>Instant Coffee</h2>
+          </div>
+          <div class="coffee-type hidden" id="instant">
+            <ul>
+              <li>Spray-Dried</li>
+              <li>Freeze-Dried</li>
+              <li>Agglomerated</li>
+              <li>Flavoured</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$14</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="product-box">
+        <div onclick="toggleTypes('Black_coffee')">
+          <div class="content">
+            <img src="./images/black-coffee.jpg" alt="">
+            <p>3 flavors to try</p>
+            <h2>Black coffee</h2>
+          </div>
+          <div class="coffee-type hidden" id="Black_coffee">
+            <ul>
+              <li>Americano</li>
+              <li>Cold-brew</li>
+              <li>Ristretto</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$10</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+
+      <!-- Box 3-->
+      <div class="product-box">
+        <div onclick="toggleTypes('Latte')">
+          <div class="content">
+            <img src="./images/latte.jpg" alt="">
+            <p>4 flavors to try</p>
+            <h2>Latte</h2>
+          </div>
+          <div class="coffee-type hidden" id="Latte">
+            <ul>
+              <li>Mocha</li>
+              <li>Hazelnut</li>
+              <li>Caramel</li>
+              <li>Vanilla</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$20</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="product-box">
+        <div onclick="toggleTypes('Cappacino')">
+          <div class="content">
+            <img src="./images/capaccino.jpg" alt="">
+            <p>3 flavors to try</p>
+            <h2>Cappacino</h2>
+          </div>
+          <div class="coffee-type hidden" id="Cappacino">
+            <ul>
+              <li>Iced</li>
+              <li>Dry Cappacino</li>
+              <li>Classic</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$18</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="product-box">
+        <div onclick="toggleTypes('Espresso')">
+          <div class="content">
+            <img src="./images/espresso.jpg" alt="">
+            <p>4 flavors to try</p>
+            <h2>Espresso</h2>
+          </div>
+          <div class="coffee-type hidden" id="Espresso">
+            <ul>
+              <li>Classic</li>
+              <li>Doppio</li>
+              <li>Short black</li>
+              <li>Espresso shot</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$25</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+
+      <!-- Box 6 -->
+      <div class="product-box">
+        <div onclick="toggleTypes('Milk-tea')">
+          <div class="content">
+            <img src="./images/milk-tea.jpg" alt="">
+            <p>4 flavors to try</p>
+            <h2>Milk Tea</h2>
+          </div>
+          <div class="coffee-type hidden" id="Milk-tea">
+            <ul>
+              <li>Brown sugar</li>
+              <li>Mango</li>
+              <li>Royal</li>
+              <li>Strawberry</li>
+            </ul>
+          </div>
+        </div>
+        <i class="bx bx-heart heart-icon"></i>
+        <div class="product-info">
+          <span>$15</span>
+          <i class="bx bx-shopping-bag add-to-bag"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team container" id="team">
+    <div class="heading">
+      <h2>Meet our experts</h2>
+    </div>
+    <div class="team-content">
+      <div class="team-box">
+        <img src="./images/chef1.jpg" alt="">
+        <h2>Franklin Sierra</h2>
+        <span>Co-lead Chef</span>
+        <p>As a roaster we search the world over to establish relationships with great farmers cultivating great coffees
+        </p>
+      </div>
+      <div class="team-box">
+        <img src="./images/chef2.jpg" alt="">
+        <h2>Aydin Carr</h2>
+        <span>lead Chef</span>
+        <p>As a roaster we search the world over to establish relationships with great farmers cultivating great coffees
+        </p>
+      </div>
+      <div class="team-box">
+        <img src="./images/chef3.jpg" alt="">
+        <h2>Maxwell Wise</h2>
+        <span>Co-led Chef</span>
+        <p>As a roaster we search the world over to establish relationships with great farmers cultivating great coffees
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review -->
+  <section class="review container" id="review">
+    <div class="heading">
+      <h2>Customer's Review</h2>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- slide 1 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="./images/person4.jpg" alt="">
+            <h2>Jonas Blue</h2>
+            <span><mark>
+                The taste of coffee is stunning,<br />
+                subtle and smooth flavour.
+              </mark></span>
+            <p>
+              The taste of coffee can vary depending on the type of bean, roast level , and brewing method used . Some
+              people prefer a strong and bold taste , while others prefer a more subtle and smooth flavor.
+            </p>
+          </div>
+        </div>
+
+        <!-- slide 2-->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="./images/person2.jpg" alt="">
+            <h2>Jhon Ben</h2>
+            <span>
+              <mark> taste of coffee is Perfect,<br />
+                refreshing flavour.</mark>
+            </span>
+            <p>
+              The taste of coffee can vary depending on the type of bean, roast level , and brewing method used . Some
+              people prefer a strong and bold taste , while others prefer a more subtle and smooth flavor.
+            </p>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="./images/person3.jpg" alt="">
+            <h2>Charlie</h2>
+            <span> <mark>
+                Milk-tea is really good,<br />
+                should definetly try.</mark>
+            </span>
+            <p>
+              The taste of coffee can vary depending on the type of bean, roast level , and brewing method used . Some
+              people prefer a strong and bold taste , while others prefer a more subtle and smooth flavor.
+            </p>
+          </div>
+        </div>
+
+        <!-- slide 4 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="./images/person1.jpg" alt="">
+            <h2>Kiary Blue</h2>
+            <span> <mark>
+                Coffee taste's really good,<br />
+                feels fresh.</mark>
+            </span>
+            <p>
+              The taste of coffee can vary depending on the type of bean, roast level , and brewing method used . Some
+              people prefer a strong and bold taste , while others prefer a more subtle and smooth flavor.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section class="book container" id="book">
+    <img src="./images/bg3.jpg" alt="" class="book-img">
+    <div class="book-overlay"></div>
+    <div class="book-data">
+      <h2>
+        Let's book a table <br> For you
+      </h2>
+      <div class="form">
+        <div class="input-box">
+          <i class="bx bx-phone-call"></i>
+          <input type="tel" maxlength="10" name="" placeholder="Your Number" id="phone" required>
+        </div>
+        <div class="input-box">
+          <i class="bx bx-user"></i>
+          <input type="int" name="" placeholder="People" id="quantity">
+        </div>
+        <button type="button" class="book-btn" disabled>Book Table</button>
+      </div>
+      <p>We will contact you to confirm your booking</p>
+    </div>
+  </section>
+
+  <!-- footer -->
+
+  <section class="footer container">
+    <div class="footer-box">
+      <a href="#" class="logo">Q.Cafe</a>
+      <div class="social">
+        <a href="#"><i class="bx bxl-twitch"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h3>About</h3>
+      <a href="#">Our story</a>
+      <a href="#">FAQ</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-box">
+      <h3>Customer's Resources</h3>
+      <a href="#">Menu</a>
+      <a href="#">Location</a>
+      <a href="#">Support</a>
+    </div>
+    <div class="footer-box">
+      <h3>Services</h3>
+      <a href="#">Payment Options</a>
+      <a href="#">Refund & exchange</a>
+      <a href="#">Limitation of Liability</a>
+    </div>
+  </section>
+
+  <!-- login -->
+
+  <section class="signin-block container">
+    <form class="signin">
+      <span class="close" onclick="closeSection()">&times;</span>
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+      <div class="form-floating">
+        <label for="floatingInput">Email address</label>
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      </div>
+      <div class="form-floating">
+        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      </div>
+
+      <div class="form-check text-start my-3">
+        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Remember me
+        </label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="button" id="submit">Sign in</button>
+    </form>
+  </section>
+
+  <!-- shopping cart -->
+  <div class=" shopping-cart container">
+    <div id="cart-container" class="hidden">
+      <i class='bx bx-arrow-back' id="back-btn"></i>
+      <h3>Your Bag</h3>
+      <ul id="cart-list">
+        <!-- Cart items-->
+      </ul>
+      <div class="emptyBag">
+        <i class='bx bxs-coffee-alt'></i>
+        <p id="msg">Your bag is empty as a cup waiting for a coffee</p>
+      </div>
+      <div class="cartBtn">
+        <button id="buy-btn">Buy</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <p class="copyright">&#169; QCAFE</p>
+
+  <!-- login script-->
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- scrollreveal script-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Swiper JS script-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- alert script-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- main script -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
