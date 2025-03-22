@@ -5,7 +5,7 @@ Welcome to the Q.cafe Website project! This project is a simple, beautifully des
 
 Live Demo
 You can view the live version of the website here:<br/>
-<i src="https://q-cafe.netlify.app/">Q.cafe - Sipp, Relax, Refresh!!</i>
+<href src="https://q-cafe.netlify.app/">Q.cafe - Sipp, Relax, Refresh!!</href>
 
 Project Overview
 This website serves as an online presence for a coffee shop, offering customers a user-friendly interface to explore the shop’s offerings and contact information. The features include:
